@@ -1,7 +1,9 @@
 package com.example.cf17marcsoler.passallista;
 import java.io.*;
 public class Horario{
+
     public static final int N_MODULOS = 13;
+    public static final int N_HORAS = 6;
     /*
      * El código del modulo estará formado por 5 cifras, las dos primeras sacadas del módulo, las otras tres conformadas por la UF correspondeiente.
      * EL código del curso estara formado por cuatro cifras, basadas en el código Ascii de dos de las letras significativas del nombre del curso, que serán: DM (DAM), DW (DAW), AX (ASIX)
@@ -10,17 +12,17 @@ public class Horario{
       */
 
 
-    String horas[] = new String[N_MODULOS];
-    int modulos[] = new int[N_MODULOS];
+    int horas[] = new int[N_HORAS];
+    //int modulos[] = new int[N_MODULOS];
     int curso;
     int hora, minuto;
 
 
 
     public Horario(){
-        for(int i = 0; i < N_MODULOS; i++ ){
-            modulos[i] = 0;
-        }
+       // for(int i = 0; i < N_MODULOS; i++ ){
+       //     modulos[i] = 0;
+       // }
         curso = 0;
         hora = 0;
         minuto = 0;
@@ -63,10 +65,13 @@ public class Horario{
         }
     }
 
-    public Horario(int modulos[], int hora, int minuto){
-        for(int i = 0; i < N_MODULOS; i++ ){
-            this.modulos[i] = modulos[i];
-            this.horas[i] = this.hora + ":" + this.minuto;
+    public Horario(int modulos[], int codigo){
+        for(int i = 0; i < N_HORAS; i++ ){
+            if(i != 3){
+                this.horas[i] = codigo;
+            }else {
+                this.horas[i] = 000;
+            }
         }
     }
 

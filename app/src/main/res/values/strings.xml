@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">PassaLlista</string>
+    <string name="horas"></string>
 </resources>
