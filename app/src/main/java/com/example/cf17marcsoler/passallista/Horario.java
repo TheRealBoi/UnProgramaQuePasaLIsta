@@ -14,8 +14,9 @@ public class Horario{
 
     int horas[] = new int[N_HORAS];
     //int modulos[] = new int[N_MODULOS];
-    int curso;
-    int hora, minuto;
+    int modulo;
+    private int curso;
+    private int hora, minuto;
 
 
 
@@ -23,6 +24,7 @@ public class Horario{
        // for(int i = 0; i < N_MODULOS; i++ ){
        //     modulos[i] = 0;
        // }
+        modulo = 000;
         curso = 0;
         hora = 0;
         minuto = 0;
@@ -31,7 +33,19 @@ public class Horario{
         this();
         this.curso = curso;
     }
+    public Horario(int modulos[], int codigo){
+        for(int i = 0; i < N_HORAS; i++ ){
+            if(i != 3){
+                this.horas[i] = codigo;
+            }else {
+                this.horas[i] = 000;
+            }
+        }
+    }
 
+    public void setModulo(int modulo){
+        this.modulo = modulo;
+    }
 
     public int getMinuto() {
         return minuto;
@@ -65,14 +79,17 @@ public class Horario{
         }
     }
 
-    public Horario(int modulos[], int codigo){
-        for(int i = 0; i < N_HORAS; i++ ){
-            if(i != 3){
-                this.horas[i] = codigo;
-            }else {
-                this.horas[i] = 000;
+    public String toString(){
+        String string = new String();
+        for(int i = 0; i < horas.length; i++ ){
+            string = horas[i] + " ";
+            if(horas[i] == 000){
+                string = "patio";
+            }else{
+                string = "M" + horas[i];
             }
         }
+        return string;
     }
 
 }
