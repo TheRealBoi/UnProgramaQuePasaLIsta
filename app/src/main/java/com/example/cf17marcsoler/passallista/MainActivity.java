@@ -6,6 +6,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    int modul;
+    String parseString;
+    Horario horario = new Horario(6877);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -13,7 +16,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         TextView hora = findViewById(R.id.textView);
+        TextView hores = findViewById(R.id.Hores);
         EditText introduirHores = findViewById(R.id.editText);
 
+
+
+        parseString = introduirHores.getText().toString();
+        for(int i = 0; i < horario.horas.length; i++ ){
+            introduirHores.setText("Hora", TextView.BufferType.EDITABLE);
+            horario.guardarHora(i, modul);
+        }
+        hora.setText(horario.toString());
     }
 }
