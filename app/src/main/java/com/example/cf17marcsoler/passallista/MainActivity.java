@@ -2,6 +2,7 @@ package com.example.cf17marcsoler.passallista;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -21,11 +22,14 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        parseString = introduirHores.getText().toString();
+
         for(int i = 0; i < horario.horas.length; i++ ){
             introduirHores.setText("Hora", TextView.BufferType.EDITABLE);
+            parseString = introduirHores.getText().toString();
             horario.guardarHora(i, modul);
         }
         hora.setText(horario.toString());
+        String TAG = "HORA";
+        Log.i(TAG, horario.toString());
     }
 }
