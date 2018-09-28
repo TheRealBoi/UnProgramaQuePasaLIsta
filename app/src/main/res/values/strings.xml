@@ -1,4 +1,21 @@
 <resources>
     <string name="app_name">PassaLlista</string>
     <string name="horas">Horas</string>
+    <string-array name="Desplegable">
+        <item>M01</item>
+        <item>M02</item>
+        <item>M03</item>
+        <item>M04</item>
+        <item>M05</item>
+        <item>M06</item>
+        <item>M07</item>
+        <item>M08</item>
+        <item>M09</item>
+        <item>M10</item>
+        <item>M11</item>
+        <item>M12</item>
+        <item>M13</item>
+        <item>M14</item>
+        <item>M15</item>
+    </string-array>
 </resources>
