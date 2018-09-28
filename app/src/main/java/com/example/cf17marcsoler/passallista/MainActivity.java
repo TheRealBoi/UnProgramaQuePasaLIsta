@@ -16,11 +16,10 @@ public class MainActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         TextView hora = findViewById(R.id.textView);
         TextView hores = findViewById(R.id.Hores);
         EditText introduirHores = findViewById(R.id.editText);
-
-
 
 
         for(int i = 0; i < horario.horas.length; i++ ){
