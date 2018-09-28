@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // TextView hora = findViewById(R.id.textView);
-        TextView hores = findViewById(R.id.textView);
+        TextView hores = findViewById(R.id.TextView);
 
 
         EditText introduirHores = findViewById(R.id.editText);
